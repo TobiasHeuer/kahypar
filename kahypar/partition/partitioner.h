@@ -24,7 +24,7 @@
 #include <string>
 #include <vector>
 
-#include "gtest/gtest_prod.h"
+// #include "gtest/gtest_prod.h"
 
 #include "kahypar/definitions.h"
 #include "kahypar/io/hypergraph_io.h"
@@ -42,7 +42,7 @@
 namespace kahypar {
 // Workaround for bug in gtest
 // Because of different namespaces it is not possible to use
-// FRIEND_TEST macro.
+// // FRIEND_TEST macro.
 namespace io {
 class APartitionOfAHypergraph_IsCorrectlyWrittenToFile_Test;
 }  // namespace io
@@ -101,22 +101,22 @@ class Partitioner {
   inline void partition(Hypergraph& hypergraph, Context& context);
 
  private:
-  FRIEND_TEST(APartitionerWithHyperedgeSizeThreshold, RemovesHyperedgesExceedingThreshold);
-  FRIEND_TEST(APartitionerWithHyperedgeSizeThreshold, RestoresHyperedgesExceedingThreshold);
-  FRIEND_TEST(APartitionerWithHyperedgeSizeThreshold,
+  // FRIEND_TEST(APartitionerWithHyperedgeSizeThreshold, RemovesHyperedgesExceedingThreshold);
+  // FRIEND_TEST(APartitionerWithHyperedgeSizeThreshold, RestoresHyperedgesExceedingThreshold);
+  // FRIEND_TEST(APartitionerWithHyperedgeSizeThreshold,
               PartitionsUnpartitionedHypernodesAfterRestore);
-  FRIEND_TEST(APartitionerWithHyperedgeSizeThreshold,
+  // FRIEND_TEST(APartitionerWithHyperedgeSizeThreshold,
               AssignsAllRemainingHypernodesToDefinedPartition);
-  FRIEND_TEST(APartitionerWithHyperedgeSizeThreshold,
+  // FRIEND_TEST(APartitionerWithHyperedgeSizeThreshold,
               TriesToMinimizesCutIfNoPinOfRemainingHyperedgeIsPartitioned);
-  FRIEND_TEST(APartitionerWithHyperedgeSizeThreshold,
+  // FRIEND_TEST(APartitionerWithHyperedgeSizeThreshold,
               TriesToMinimizesCutIfOnlyOnePartitionIsUsed);
-  FRIEND_TEST(APartitionerWithHyperedgeSizeThreshold,
+  // FRIEND_TEST(APartitionerWithHyperedgeSizeThreshold,
               DistributesAllRemainingHypernodesToMinimizeImbalaceIfCutCannotBeMinimized);
-  FRIEND_TEST(APartitioner, UsesKaHyParPartitioningOnCoarsestHypergraph);
-  FRIEND_TEST(APartitioner, UncoarsensTheInitiallyPartitionedHypergraph);
-  FRIEND_TEST(APartitioner, CalculatesPinCountsOfAHyperedgesAfterInitialPartitioning);
-  FRIEND_TEST(APartitioner, CanUseVcyclesAsGlobalSearchStrategy);
+  // FRIEND_TEST(APartitioner, UsesKaHyParPartitioningOnCoarsestHypergraph);
+  // FRIEND_TEST(APartitioner, UncoarsensTheInitiallyPartitionedHypergraph);
+  // FRIEND_TEST(APartitioner, CalculatesPinCountsOfAHyperedgesAfterInitialPartitioning);
+  // FRIEND_TEST(APartitioner, CanUseVcyclesAsGlobalSearchStrategy);
   friend class io::APartitionOfAHypergraph_IsCorrectlyWrittenToFile_Test;
   friend class metrics::APartitionedHypergraph;
 

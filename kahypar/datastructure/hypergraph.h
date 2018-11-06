@@ -32,7 +32,7 @@
 #include <utility>
 #include <vector>
 
-#include "gtest/gtest_prod.h"
+// #include "gtest/gtest_prod.h"
 
 #include "kahypar/datastructure/connectivity_sets.h"
 #include "kahypar/datastructure/fast_reset_flag_array.h"
@@ -1838,24 +1838,24 @@ class GenericHypergraph {
   }
 
  private:
-  FRIEND_TEST(AHypergraph, DisconnectsHypernodeFromHyperedge);
-  FRIEND_TEST(AHypergraph, RemovesHyperedges);
-  FRIEND_TEST(AHypergraph, DecrementsHypernodeDegreeOfAffectedHypernodesOnHyperedgeRemoval);
-  FRIEND_TEST(AnIncidenceIterator, AllowsIterationOverIncidentHyperedges);
-  FRIEND_TEST(AnIncidenceIterator, AllowsIterationOverPinsOfHyperedge);
-  FRIEND_TEST(AHypergraphMacro, IteratesOverAllIncidentHyperedges);
-  FRIEND_TEST(AHypergraphMacro, IteratesOverAllPinsOfAHyperedge);
-  FRIEND_TEST(AContractionMemento, StoresOldStateOfInvolvedHypernodes);
-  FRIEND_TEST(AnUncontractionOperation, DeletesIncidenceInfoAddedDuringContraction);
-  FRIEND_TEST(AHypergraph, InvalidatesPartitionPinCountsOnHyperedgeRemoval);
-  FRIEND_TEST(AHypergraph, CalculatesPinCountsOfAHyperedge);
-  FRIEND_TEST(APartitionedHypergraph, StoresPartitionPinCountsForHyperedges);
-  FRIEND_TEST(AHypergraph, ExtractedFromAPartitionedHypergraphHasInitializedPartitionInformation);
-  FRIEND_TEST(AHypergraph, RemovesEmptyHyperedgesOnHypernodeIsolation);
-  FRIEND_TEST(AHypergraph, RestoresRemovedEmptyHyperedgesOnRestoreOfIsolatedHypernodes);
-  FRIEND_TEST(APartitionedHypergraph, CanBeDecomposedIntoHypergraphs);
-  FRIEND_TEST(AHypergraph, WithContractedHypernodesCanBeReindexed);
-  FRIEND_TEST(AHypergraph,
+  // FRIEND_TEST(AHypergraph, DisconnectsHypernodeFromHyperedge);
+  // FRIEND_TEST(AHypergraph, RemovesHyperedges);
+  // FRIEND_TEST(AHypergraph, DecrementsHypernodeDegreeOfAffectedHypernodesOnHyperedgeRemoval);
+  // FRIEND_TEST(AnIncidenceIterator, AllowsIterationOverIncidentHyperedges);
+  // FRIEND_TEST(AnIncidenceIterator, AllowsIterationOverPinsOfHyperedge);
+  // FRIEND_TEST(AHypergraphMacro, IteratesOverAllIncidentHyperedges);
+  // FRIEND_TEST(AHypergraphMacro, IteratesOverAllPinsOfAHyperedge);
+  // FRIEND_TEST(AContractionMemento, StoresOldStateOfInvolvedHypernodes);
+  // FRIEND_TEST(AnUncontractionOperation, DeletesIncidenceInfoAddedDuringContraction);
+  // FRIEND_TEST(AHypergraph, InvalidatesPartitionPinCountsOnHyperedgeRemoval);
+  // FRIEND_TEST(AHypergraph, CalculatesPinCountsOfAHyperedge);
+  // FRIEND_TEST(APartitionedHypergraph, StoresPartitionPinCountsForHyperedges);
+  // FRIEND_TEST(AHypergraph, ExtractedFromAPartitionedHypergraphHasInitializedPartitionInformation);
+  // FRIEND_TEST(AHypergraph, RemovesEmptyHyperedgesOnHypernodeIsolation);
+  // FRIEND_TEST(AHypergraph, RestoresRemovedEmptyHyperedgesOnRestoreOfIsolatedHypernodes);
+  // FRIEND_TEST(APartitionedHypergraph, CanBeDecomposedIntoHypergraphs);
+  // FRIEND_TEST(AHypergraph, WithContractedHypernodesCanBeReindexed);
+  // FRIEND_TEST(AHypergraph,
               WithOnePartitionEqualsTheExtractedHypergraphExceptForPartitionRelatedInfos);
 
   /*!

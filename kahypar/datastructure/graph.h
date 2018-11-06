@@ -30,7 +30,7 @@
 #include <utility>
 #include <vector>
 
-#include "gtest/gtest_prod.h"
+// #include "gtest/gtest_prod.h"
 
 #include "kahypar/macros.h"
 
@@ -525,9 +525,9 @@ class Graph {
   }
 
  private:
-  FRIEND_TEST(ABipartiteGraph, DeterminesIncidentClusterWeightsOfAClusterCorrect);
-  FRIEND_TEST(ACliqueGraph, DeterminesIncidentClusterWeightsOfAClusterCorrect);
-  FRIEND_TEST(ALouvainKarateClub, DoesLouvainAlgorithm);
+  // FRIEND_TEST(ABipartiteGraph, DeterminesIncidentClusterWeightsOfAClusterCorrect);
+  // FRIEND_TEST(ACliqueGraph, DeterminesIncidentClusterWeightsOfAClusterCorrect);
+  // FRIEND_TEST(ALouvainKarateClub, DoesLouvainAlgorithm);
 
 
   Graph(const std::vector<NodeID>& adj_array, const std::vector<Edge>& edges,

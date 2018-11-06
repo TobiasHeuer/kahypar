@@ -194,7 +194,7 @@ class InsertOnlySparseSet final : public SparseSetBase<ValueType,
   ~InsertOnlySparseSet() = default;
 
  private:
-  FRIEND_TEST(AnInsertOnlySparseSet, HandlesThresholdOverflow);
+  // FRIEND_TEST(AnInsertOnlySparseSet, HandlesThresholdOverflow);
 
   bool containsImpl(const ValueType value) const {
     return _sparse[value] == _threshold;

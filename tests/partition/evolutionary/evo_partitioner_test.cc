@@ -62,7 +62,7 @@ class TheEvoPartitioner : public Test {
   Hypergraph hypergraph;
 
  private:
-  FRIEND_TEST(TheEvoPartitioner, PicksTheRightStrategy);
+  // FRIEND_TEST(TheEvoPartitioner, PicksTheRightStrategy);
 };
 
 TEST_F(TheEvoPartitioner, IsCorrectlyDecidingTheActions) {

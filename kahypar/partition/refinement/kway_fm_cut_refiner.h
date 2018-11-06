@@ -27,7 +27,7 @@
 #include <utility>
 #include <vector>
 
-#include "gtest/gtest_prod.h"
+// #include "gtest/gtest_prod.h"
 
 #include "kahypar/datastructure/fast_reset_array.h"
 #include "kahypar/datastructure/fast_reset_flag_array.h"
@@ -84,9 +84,9 @@ class KWayFMRefiner final : public IRefiner,
   KWayFMRefiner& operator= (KWayFMRefiner&&) = delete;
 
  private:
-  FRIEND_TEST(AKwayFMRefinerDeathTest, ConsidersSingleNodeHEsDuringInitialGainComputation);
-  FRIEND_TEST(AKwayFMRefinerDeathTest, ConsidersSingleNodeHEsDuringInducedGainComputation);
-  FRIEND_TEST(AKwayFMRefiner, KnowsIfAHyperedgeIsFullyActive);
+  // FRIEND_TEST(AKwayFMRefinerDeathTest, ConsidersSingleNodeHEsDuringInitialGainComputation);
+  // FRIEND_TEST(AKwayFMRefinerDeathTest, ConsidersSingleNodeHEsDuringInducedGainComputation);
+  // FRIEND_TEST(AKwayFMRefiner, KnowsIfAHyperedgeIsFullyActive);
 
   void initializeImpl(const HyperedgeWeight max_gain) override final {
     if (!_is_initialized) {

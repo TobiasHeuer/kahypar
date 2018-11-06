@@ -155,9 +155,9 @@ class MaximumFlow {
 
  protected:
   template <typename T>
-  FRIEND_TEST(AMaximumFlow, ChecksIfAugmentingPathExist);
+  // FRIEND_TEST(AMaximumFlow, ChecksIfAugmentingPathExist);
   template <typename T>
-  FRIEND_TEST(AMaximumFlow, AugmentAlongPath);
+  // FRIEND_TEST(AMaximumFlow, AugmentAlongPath);
 
   Flow augment(const NodeID cur, const Flow min_flow = Network::kInfty) {
     if (_flow_network.isSource(cur) || min_flow == 0) {
@@ -249,9 +249,9 @@ class EdmondKarp : public MaximumFlow<Network>{
 
  private:
   template <typename T>
-  FRIEND_TEST(AMaximumFlow, ChecksIfAugmentingPathExist);
+  // FRIEND_TEST(AMaximumFlow, ChecksIfAugmentingPathExist);
   template <typename T>
-  FRIEND_TEST(AMaximumFlow, AugmentAlongPath);
+  // FRIEND_TEST(AMaximumFlow, AugmentAlongPath);
 
   using Base::_hg;
   using Base::_context;
@@ -331,9 +331,9 @@ class GoldbergTarjan : public MaximumFlow<Network>{
 
  protected:
   template <typename T>
-  FRIEND_TEST(AMaximumFlow, ChecksIfAugmentingPathExist);
+  // FRIEND_TEST(AMaximumFlow, ChecksIfAugmentingPathExist);
   template <typename T>
-  FRIEND_TEST(AMaximumFlow, AugmentAlongPath);
+  // FRIEND_TEST(AMaximumFlow, AugmentAlongPath);
 
   void init() {
     _visited.reset();
@@ -550,9 +550,9 @@ class BoykovKolmogorov : public MaximumFlow<Network>{
 
  private:
   template <typename T>
-  FRIEND_TEST(AMaximumFlow, ChecksIfAugmentingPathExist);
+  // FRIEND_TEST(AMaximumFlow, ChecksIfAugmentingPathExist);
   template <typename T>
-  FRIEND_TEST(AMaximumFlow, AugmentAlongPath);
+  // FRIEND_TEST(AMaximumFlow, AugmentAlongPath);
 
   void mapToExternalFlowNetwork() {
     _flow_graph.reset();
@@ -638,9 +638,9 @@ class IBFS : public MaximumFlow<Network>{
 
  private:
   template <typename T>
-  FRIEND_TEST(AMaximumFlow, ChecksIfAugmentingPathExist);
+  // FRIEND_TEST(AMaximumFlow, ChecksIfAugmentingPathExist);
   template <typename T>
-  FRIEND_TEST(AMaximumFlow, AugmentAlongPath);
+  // FRIEND_TEST(AMaximumFlow, AugmentAlongPath);
 
   void mapToExternalFlowNetwork() {
     _flow_graph.initSize(_flow_network.numNodes(), _flow_network.numEdges() - _flow_network.numUndirectedEdges());

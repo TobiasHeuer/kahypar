@@ -63,7 +63,7 @@ class VertexPairCoarsenerBase : public CoarsenerBase {
   VertexPairCoarsenerBase& operator= (VertexPairCoarsenerBase&&) = delete;
 
  protected:
-  FRIEND_TEST(ACoarsener, SelectsNodePairToContractBasedOnHighestRating);
+  // FRIEND_TEST(ACoarsener, SelectsNodePairToContractBasedOnHighestRating);
 
   bool doUncoarsen(IRefiner& refiner) {
     Metrics current_metrics = { metrics::hyperedgeCut(_hg),
