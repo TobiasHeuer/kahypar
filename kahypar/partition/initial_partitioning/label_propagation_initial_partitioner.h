@@ -207,15 +207,15 @@ class LabelPropagationInitialPartitioner : public IInitialPartitioner,
 
  private:
   // FRIEND_TEST(ALabelPropagationMaxGainMoveTest,
-              AllMaxGainMovesAZeroGainMovesIfNoHypernodeIsAssigned);
+  //            AllMaxGainMovesAZeroGainMovesIfNoHypernodeIsAssigned);
   // FRIEND_TEST(ALabelPropagationMaxGainMoveTest,
-              MaxGainMoveIsAZeroGainMoveIfANetHasOnlyOneAssignedHypernode);
+  //            MaxGainMoveIsAZeroGainMoveIfANetHasOnlyOneAssignedHypernode);
   // FRIEND_TEST(ALabelPropagationMaxGainMoveTest,
-              CalculateMaxGainMoveIfThereAStillUnassignedNodesOfAHyperedgeAreLeft);
+  //            CalculateMaxGainMoveIfThereAStillUnassignedNodesOfAHyperedgeAreLeft);
   // FRIEND_TEST(ALabelPropagationMaxGainMoveTest,
-              CalculateMaxGainMoveOfAnAssignedHypernodeIfAllHypernodesAreAssigned);
+  //            CalculateMaxGainMoveOfAnAssignedHypernodeIfAllHypernodesAreAssigned);
   // FRIEND_TEST(ALabelPropagationMaxGainMoveTest,
-              CalculateMaxGainMoveOfAnUnassignedHypernodeIfAllHypernodesAreAssigned);
+  //            CalculateMaxGainMoveOfAnUnassignedHypernodeIfAllHypernodesAreAssigned);
 
   PartitionGainPair computeMaxGainMoveForUnassignedSourcePart(const HypernodeID hn) {
     ASSERT(std::all_of(_tmp_scores.begin(), _tmp_scores.end(), [](Gain i) { return i == 0; }),

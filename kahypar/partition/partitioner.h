@@ -104,15 +104,15 @@ class Partitioner {
   // FRIEND_TEST(APartitionerWithHyperedgeSizeThreshold, RemovesHyperedgesExceedingThreshold);
   // FRIEND_TEST(APartitionerWithHyperedgeSizeThreshold, RestoresHyperedgesExceedingThreshold);
   // FRIEND_TEST(APartitionerWithHyperedgeSizeThreshold,
-              PartitionsUnpartitionedHypernodesAfterRestore);
+  //            PartitionsUnpartitionedHypernodesAfterRestore);
   // FRIEND_TEST(APartitionerWithHyperedgeSizeThreshold,
-              AssignsAllRemainingHypernodesToDefinedPartition);
+  //            AssignsAllRemainingHypernodesToDefinedPartition);
   // FRIEND_TEST(APartitionerWithHyperedgeSizeThreshold,
-              TriesToMinimizesCutIfNoPinOfRemainingHyperedgeIsPartitioned);
+  //            TriesToMinimizesCutIfNoPinOfRemainingHyperedgeIsPartitioned);
   // FRIEND_TEST(APartitionerWithHyperedgeSizeThreshold,
-              TriesToMinimizesCutIfOnlyOnePartitionIsUsed);
+  //            TriesToMinimizesCutIfOnlyOnePartitionIsUsed);
   // FRIEND_TEST(APartitionerWithHyperedgeSizeThreshold,
-              DistributesAllRemainingHypernodesToMinimizeImbalaceIfCutCannotBeMinimized);
+  //            DistributesAllRemainingHypernodesToMinimizeImbalaceIfCutCannotBeMinimized);
   // FRIEND_TEST(APartitioner, UsesKaHyParPartitioningOnCoarsestHypergraph);
   // FRIEND_TEST(APartitioner, UncoarsensTheInitiallyPartitionedHypergraph);
   // FRIEND_TEST(APartitioner, CalculatesPinCountsOfAHyperedgesAfterInitialPartitioning);

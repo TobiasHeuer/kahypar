@@ -154,9 +154,9 @@ class MaximumFlow {
   }
 
  protected:
-  template <typename T>
+  // template <typename T>
   // FRIEND_TEST(AMaximumFlow, ChecksIfAugmentingPathExist);
-  template <typename T>
+  // template <typename T>
   // FRIEND_TEST(AMaximumFlow, AugmentAlongPath);
 
   Flow augment(const NodeID cur, const Flow min_flow = Network::kInfty) {
@@ -248,9 +248,9 @@ class EdmondKarp : public MaximumFlow<Network>{
   }
 
  private:
-  template <typename T>
+  // template <typename T>
   // FRIEND_TEST(AMaximumFlow, ChecksIfAugmentingPathExist);
-  template <typename T>
+  // template <typename T>
   // FRIEND_TEST(AMaximumFlow, AugmentAlongPath);
 
   using Base::_hg;
@@ -330,9 +330,9 @@ class GoldbergTarjan : public MaximumFlow<Network>{
   }
 
  protected:
-  template <typename T>
+  // template <typename T>
   // FRIEND_TEST(AMaximumFlow, ChecksIfAugmentingPathExist);
-  template <typename T>
+  // template <typename T>
   // FRIEND_TEST(AMaximumFlow, AugmentAlongPath);
 
   void init() {
@@ -549,9 +549,9 @@ class BoykovKolmogorov : public MaximumFlow<Network>{
   }
 
  private:
-  template <typename T>
+  // template <typename T>
   // FRIEND_TEST(AMaximumFlow, ChecksIfAugmentingPathExist);
-  template <typename T>
+  // template <typename T>
   // FRIEND_TEST(AMaximumFlow, AugmentAlongPath);
 
   void mapToExternalFlowNetwork() {
@@ -637,9 +637,9 @@ class IBFS : public MaximumFlow<Network>{
   }
 
  private:
-  template <typename T>
+  // template <typename T>
   // FRIEND_TEST(AMaximumFlow, ChecksIfAugmentingPathExist);
-  template <typename T>
+  // template <typename T>
   // FRIEND_TEST(AMaximumFlow, AugmentAlongPath);
 
   void mapToExternalFlowNetwork() {

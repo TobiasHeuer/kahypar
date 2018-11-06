@@ -159,6 +159,29 @@ enum class EvoDecision :uint8_t {
   combine
 };
 
+enum class FlowAlgorithm : uint8_t {
+  edmond_karp,
+  goldberg_tarjan,
+  boykov_kolmogorov,
+  ibfs,
+  UNDEFINED
+};
+
+enum class FlowNetworkType : uint8_t {
+  lawler,
+  heuer,
+  wong,
+  hybrid,
+  UNDEFINED
+};
+
+enum class FlowExecutionMode : uint8_t {
+  constant,
+  multilevel,
+  exponential,
+  UNDEFINED
+};
+
 
 std::ostream& operator<< (std::ostream& os, const EvoReplaceStrategy& replace) {
   switch (replace) {
@@ -210,29 +233,6 @@ std::ostream& operator<< (std::ostream& os, const RatingPartitionPolicy& policy)
   }
   return os << static_cast<uint8_t>(policy);
 }
-
-enum class FlowAlgorithm : uint8_t {
-  edmond_karp,
-  goldberg_tarjan,
-  boykov_kolmogorov,
-  ibfs,
-  UNDEFINED
-};
-
-enum class FlowNetworkType : uint8_t {
-  lawler,
-  heuer,
-  wong,
-  hybrid,
-  UNDEFINED
-};
-
-enum class FlowExecutionMode : uint8_t {
-  constant,
-  multilevel,
-  exponential,
-  UNDEFINED
-};
 
 std::ostream& operator<< (std::ostream& os, const Mode& mode) {
   switch (mode) {
@@ -431,7 +431,7 @@ std::ostream& operator<< (std::ostream& os, const FlowExecutionMode& mode) {
   return os << static_cast<uint8_t>(mode);
 }
 
-static EvoMutateStrategy mutateStrategyFromString(const std::string& strat) {
+/*static EvoMutateStrategy mutateStrategyFromString(const std::string& strat) {
   if (strat == "new-initial-partitioning-vcycle") {
     return EvoMutateStrategy::new_initial_partitioning_vcycle;
   } else if (strat == "vcycle") {
@@ -679,5 +679,5 @@ static FlowExecutionMode flowExecutionPolicyFromString(const std::string& mode) 
   LOG << "No valid flow execution mode.";
   exit(0);
   return FlowExecutionMode::exponential;
-}
+}*/
 }  // namespace kahypar

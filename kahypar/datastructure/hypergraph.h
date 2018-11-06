@@ -1856,7 +1856,7 @@ class GenericHypergraph {
   // FRIEND_TEST(APartitionedHypergraph, CanBeDecomposedIntoHypergraphs);
   // FRIEND_TEST(AHypergraph, WithContractedHypernodesCanBeReindexed);
   // FRIEND_TEST(AHypergraph,
-              WithOnePartitionEqualsTheExtractedHypergraphExceptForPartitionRelatedInfos);
+  //            WithOnePartitionEqualsTheExtractedHypergraphExceptForPartitionRelatedInfos);
 
   /*!
    * Returns true if hypernode is a border-node.

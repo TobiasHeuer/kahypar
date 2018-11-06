@@ -74,23 +74,23 @@ class GreedyHypergraphGrowingInitialPartitioner : public IInitialPartitioner,
  private:
   // FRIEND_TEST(AGreedyHypergraphGrowingFunctionalityTest, InsertionOfAHypernodeIntoPQ);
   // FRIEND_TEST(AGreedyHypergraphGrowingFunctionalityTest,
-              TryingToInsertAHypernodeIntoTheSamePQAsHisCurrentPart);
+  //            TryingToInsertAHypernodeIntoTheSamePQAsHisCurrentPart);
   // FRIEND_TEST(AGreedyHypergraphGrowingFunctionalityTest,
-              TryingToInsertAFixedVertex);
+  //            TryingToInsertAFixedVertex);
   // FRIEND_TEST(AGreedyHypergraphGrowingFunctionalityTest,
-              ChecksCorrectMaxGainValueAndHypernodeAfterPushingSomeHypernodesIntoPriorityQueue);
+  //            ChecksCorrectMaxGainValueAndHypernodeAfterPushingSomeHypernodesIntoPriorityQueue);
   // FRIEND_TEST(AGreedyHypergraphGrowingFunctionalityTest,
-              ChecksCorrectGainValueAfterUpdatePriorityQueue);
+  //            ChecksCorrectGainValueAfterUpdatePriorityQueue);
   // FRIEND_TEST(AGreedyHypergraphGrowingFunctionalityTest,
-              ChecksCorrectMaxGainValueAfterDeltaGainUpdate);
+  //            ChecksCorrectMaxGainValueAfterDeltaGainUpdate);
   // FRIEND_TEST(AGreedyHypergraphGrowingFunctionalityTest,
-              ChecksCorrectHypernodesAndGainValuesInPQAfterAMove);
+  //            ChecksCorrectHypernodesAndGainValuesInPQAfterAMove);
   // FRIEND_TEST(AGreedyHypergraphGrowingFunctionalityTest,
-              ChecksCorrectMaxGainValueAfterDeltaGainUpdateWithUnassignedPartMinusOne);
+  //            ChecksCorrectMaxGainValueAfterDeltaGainUpdateWithUnassignedPartMinusOne);
   // FRIEND_TEST(AGreedyHypergraphGrowingFunctionalityTest,
-              DeletesAssignedHypernodesFromPriorityQueue);
+  //            DeletesAssignedHypernodesFromPriorityQueue);
   // FRIEND_TEST(AGreedyHypergraphGrowingFunctionalityTest,
-              CheckIfAllEnabledPQContainsAtLeastOneHypernode);
+  //            CheckIfAllEnabledPQContainsAtLeastOneHypernode);
 
   void partitionImpl() override final {
     Base::multipleRunsInitialPartitioning();

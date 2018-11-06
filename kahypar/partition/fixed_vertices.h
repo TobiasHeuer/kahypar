@@ -45,6 +45,7 @@ using VertexCover = std::vector<NodeID>;
 static constexpr bool debug = false;
 static constexpr bool debug_permutations = false;
 
+#ifndef NDEBUG
 // Verify, that the matching found is an valid matching.
 static bool verify(const Matching& matching, const PartitionID k) {
   std::vector<bool> matched_left(k, false);
@@ -60,6 +61,7 @@ static bool verify(const Matching& matching, const PartitionID k) {
   }
   return true;
 }
+#endif
 
 
 class BipartiteMaximumFlow {

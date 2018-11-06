@@ -25,7 +25,6 @@
 #include <string>
 
 #include "kahypar/definitions.h"
-#include "kahypar/git_revision.h"
 #include "kahypar/partition/context.h"
 #include "kahypar/partition/evolutionary/individual.h"
 #include "kahypar/partition/metrics.h"
@@ -245,10 +244,6 @@ static inline void serialize(const Context& context, const Hypergraph& hypergrap
         oss << " vcycle" << i << "_local_search=" << timing;
       }
     }
-
-    oss << " " << context.stats.serialize().str()
-        << " git=" << STR(KaHyPar_BUILD_VERSION)
-        << std::endl;
 
     std::cout << oss.str() << std::endl;
   }

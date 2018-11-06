@@ -85,7 +85,7 @@ class FlowNetwork {
     _contains_graph_hyperedges(hypergraph.initialNumNodes()),
     _flow_graph(size, std::vector<FlowEdge>()),
     _visited(size),
-    _he_visited(_hg.initialNumEdges()) { }
+    _he_visited(_hg.initialNumEdges()) {}
 
   ~FlowNetwork() = default;
 
