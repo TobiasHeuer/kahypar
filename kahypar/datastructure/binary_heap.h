@@ -102,12 +102,13 @@ class BinaryHeapBase {
     ASSERT(_heap[0].key == BinaryHeapTraits<Derived>::sentinel(), "Sentinel element missing");
   }
 
-  inline void push(const IDType& id, const KeyType& key) {
+  KAHYPAR_ATTRIBUTE_ALWAYS_INLINE void push(const IDType& id, const KeyType& key) {
     ASSERT(!contains(id), "pushing already contained element" << id);
     ASSERT(_next_slot + 1 <= _max_size, "heap size overflow");
 
     const size_t handle = _next_slot++;
-    _heap[handle] = HeapElement(key, id);
+    _heap[handle].key = key;
+    _heap[handle].id = id;
     _handles[id] = handle;
     upHeap(handle);
     ASSERT(_heap[_handles[id]].key == key, "Push failed - wrong key:"
@@ -143,7 +144,7 @@ class BinaryHeapBase {
   inline void decreaseKeyBy(const IDType& id, const KeyType& key_delta) {
     ASSERT(contains(id), "Calling decreaseKeyBy for element not contained in Queue:" << id);
 
-#ifndef NDEBUG
+#ifdef KAHYPAR_USE_ASSERTIONS
     const KeyType old_key = _heap[_handles[id]].key;
 #endif
     const size_t handle = _handles[id];
@@ -158,7 +159,7 @@ class BinaryHeapBase {
   inline void increaseKeyBy(const IDType& id, const KeyType& key_delta) {
     ASSERT(contains(id), "Calling increaseKeyBy for element not contained in Queue:" << id);
 
-#ifndef NDEBUG
+#ifdef KAHYPAR_USE_ASSERTIONS
     const KeyType old_key = _heap[_handles[id]].key;
 #endif
     const size_t handle = _handles[id];
@@ -212,7 +213,7 @@ class BinaryHeapBase {
   inline void updateKeyBy(const IDType& id, const KeyType& key_delta) {
     ASSERT(contains(id), "Calling updateKeyBy for element not contained in Queue:" << id);
 
-#ifndef NDEBUG
+#ifdef KAHYPAR_USE_ASSERTIONS
     const KeyType old_key = _heap[_handles[id]].key;
 #endif
     const size_t handle = _handles[id];
