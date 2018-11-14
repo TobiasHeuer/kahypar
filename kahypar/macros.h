@@ -21,9 +21,7 @@
 #pragma once
 
 #ifndef NDEBUG
-#ifndef KAHYPAR_DISABLE_ASSERTIONS
-#define KAHYPAR_USE_ASSERTIONS
-#endif
+//#define KAHYPAR_USE_ASSERTIONS
 #include <cstdlib>
 #endif
 
