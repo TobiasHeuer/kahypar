@@ -183,7 +183,7 @@ enum class FlowExecutionMode : uint8_t {
 };
 
 
-std::ostream& operator<< (std::ostream& os, const EvoReplaceStrategy& replace) {
+inline std::ostream& operator<< (std::ostream& os, const EvoReplaceStrategy& replace) {
   switch (replace) {
     case EvoReplaceStrategy::worst: return os << "worst";
     case EvoReplaceStrategy::diverse: return os << "diverse";
@@ -193,7 +193,7 @@ std::ostream& operator<< (std::ostream& os, const EvoReplaceStrategy& replace) {
   return os << static_cast<uint8_t>(replace);
 }
 
-std::ostream& operator<< (std::ostream& os, const EvoCombineStrategy& combine) {
+inline std::ostream& operator<< (std::ostream& os, const EvoCombineStrategy& combine) {
   switch (combine) {
     case EvoCombineStrategy::basic: return os << "basic";
     case EvoCombineStrategy::edge_frequency: return os << "edge_frequency";
@@ -203,7 +203,7 @@ std::ostream& operator<< (std::ostream& os, const EvoCombineStrategy& combine) {
   return os << static_cast<uint8_t>(combine);
 }
 
-std::ostream& operator<< (std::ostream& os, const EvoMutateStrategy& mutation) {
+inline std::ostream& operator<< (std::ostream& os, const EvoMutateStrategy& mutation) {
   switch (mutation) {
     case EvoMutateStrategy::new_initial_partitioning_vcycle:
       return os << "new_initial_partitioning_vcycle";
@@ -215,7 +215,7 @@ std::ostream& operator<< (std::ostream& os, const EvoMutateStrategy& mutation) {
 }
 
 
-std::ostream& operator<< (std::ostream& os, const EvoDecision& decision) {
+inline std::ostream& operator<< (std::ostream& os, const EvoDecision& decision) {
   switch (decision) {
     case EvoDecision::normal:  return os << "normal";
     case EvoDecision::mutation:  return os << "mutation";
@@ -225,7 +225,7 @@ std::ostream& operator<< (std::ostream& os, const EvoDecision& decision) {
   return os << static_cast<uint8_t>(decision);
 }
 
-std::ostream& operator<< (std::ostream& os, const RatingPartitionPolicy& policy) {
+inline std::ostream& operator<< (std::ostream& os, const RatingPartitionPolicy& policy) {
   switch (policy) {
     case RatingPartitionPolicy::normal: return os << "normal";
     case RatingPartitionPolicy::evolutionary: return os << "evolutionary";
@@ -234,7 +234,7 @@ std::ostream& operator<< (std::ostream& os, const RatingPartitionPolicy& policy)
   return os << static_cast<uint8_t>(policy);
 }
 
-std::ostream& operator<< (std::ostream& os, const Mode& mode) {
+inline std::ostream& operator<< (std::ostream& os, const Mode& mode) {
   switch (mode) {
     case Mode::recursive_bisection: return os << "recursive";
     case Mode::direct_kway: return os << "direct";
@@ -244,7 +244,7 @@ std::ostream& operator<< (std::ostream& os, const Mode& mode) {
   return os << static_cast<uint8_t>(mode);
 }
 
-std::ostream& operator<< (std::ostream& os, const ContextType& type) {
+inline std::ostream& operator<< (std::ostream& os, const ContextType& type) {
   if (type == ContextType::main) {
     return os << "main";
   } else {
@@ -253,7 +253,7 @@ std::ostream& operator<< (std::ostream& os, const ContextType& type) {
   return os << static_cast<uint8_t>(type);
 }
 
-std::ostream& operator<< (std::ostream& os, const CommunityPolicy& comm_policy) {
+inline std::ostream& operator<< (std::ostream& os, const CommunityPolicy& comm_policy) {
   switch (comm_policy) {
     case CommunityPolicy::use_communities: return os << "true";
     case CommunityPolicy::ignore_communities: return os << "false";
@@ -263,7 +263,7 @@ std::ostream& operator<< (std::ostream& os, const CommunityPolicy& comm_policy) 
   return os << static_cast<uint8_t>(comm_policy);
 }
 
-std::ostream& operator<< (std::ostream& os, const HeavyNodePenaltyPolicy& heavy_hn_policy) {
+inline std::ostream& operator<< (std::ostream& os, const HeavyNodePenaltyPolicy& heavy_hn_policy) {
   switch (heavy_hn_policy) {
     case HeavyNodePenaltyPolicy::multiplicative_penalty: return os << "multiplicative";
     case HeavyNodePenaltyPolicy::no_penalty: return os << "no_penalty";
@@ -273,7 +273,7 @@ std::ostream& operator<< (std::ostream& os, const HeavyNodePenaltyPolicy& heavy_
   return os << static_cast<uint8_t>(heavy_hn_policy);
 }
 
-std::ostream& operator<< (std::ostream& os, const AcceptancePolicy& acceptance_policy) {
+inline std::ostream& operator<< (std::ostream& os, const AcceptancePolicy& acceptance_policy) {
   switch (acceptance_policy) {
     case AcceptancePolicy::best: return os << "best";
     case AcceptancePolicy::best_prefer_unmatched: return os << "best_prefer_unmatched";
@@ -283,7 +283,7 @@ std::ostream& operator<< (std::ostream& os, const AcceptancePolicy& acceptance_p
   return os << static_cast<uint8_t>(acceptance_policy);
 }
 
-std::ostream& operator<< (std::ostream& os, const FixVertexContractionAcceptancePolicy& acceptance_policy) {
+inline std::ostream& operator<< (std::ostream& os, const FixVertexContractionAcceptancePolicy& acceptance_policy) {
   switch (acceptance_policy) {
     case FixVertexContractionAcceptancePolicy::free_vertex_only: return os << "free_vertex_only";
     case FixVertexContractionAcceptancePolicy::fixed_vertex_allowed: return os << "fixed_vertex_allowed";
@@ -294,7 +294,7 @@ std::ostream& operator<< (std::ostream& os, const FixVertexContractionAcceptance
   return os << static_cast<uint8_t>(acceptance_policy);
 }
 
-std::ostream& operator<< (std::ostream& os, const RatingFunction& func) {
+inline std::ostream& operator<< (std::ostream& os, const RatingFunction& func) {
   switch (func) {
     case RatingFunction::heavy_edge: return os << "heavy_edge";
     case RatingFunction::edge_frequency: return os << "edge_frequency";
@@ -304,7 +304,7 @@ std::ostream& operator<< (std::ostream& os, const RatingFunction& func) {
   return os << static_cast<uint8_t>(func);
 }
 
-std::ostream& operator<< (std::ostream& os, const Objective& objective) {
+inline std::ostream& operator<< (std::ostream& os, const Objective& objective) {
   switch (objective) {
     case Objective::cut: return os << "cut";
     case Objective::km1: return os << "km1";
@@ -314,7 +314,7 @@ std::ostream& operator<< (std::ostream& os, const Objective& objective) {
   return os << static_cast<uint8_t>(objective);
 }
 
-std::ostream& operator<< (std::ostream& os, const InitialPartitioningTechnique& technique) {
+inline std::ostream& operator<< (std::ostream& os, const InitialPartitioningTechnique& technique) {
   switch (technique) {
     case InitialPartitioningTechnique::flat: return os << "flat";
     case InitialPartitioningTechnique::multilevel: return os << "multilevel";
@@ -324,7 +324,7 @@ std::ostream& operator<< (std::ostream& os, const InitialPartitioningTechnique& 
   return os << static_cast<uint8_t>(technique);
 }
 
-std::ostream& operator<< (std::ostream& os, const CoarseningAlgorithm& algo) {
+inline std::ostream& operator<< (std::ostream& os, const CoarseningAlgorithm& algo) {
   switch (algo) {
     case CoarseningAlgorithm::heavy_full: return os << "heavy_full";
     case CoarseningAlgorithm::heavy_lazy: return os << "heavy_lazy";
@@ -336,7 +336,7 @@ std::ostream& operator<< (std::ostream& os, const CoarseningAlgorithm& algo) {
   return os << static_cast<uint8_t>(algo);
 }
 
-std::ostream& operator<< (std::ostream& os, const RefinementAlgorithm& algo) {
+inline std::ostream& operator<< (std::ostream& os, const RefinementAlgorithm& algo) {
   switch (algo) {
     case RefinementAlgorithm::twoway_fm: return os << "twoway_fm";
     case RefinementAlgorithm::kway_fm: return os << "kway_fm";
@@ -353,7 +353,7 @@ std::ostream& operator<< (std::ostream& os, const RefinementAlgorithm& algo) {
   return os << static_cast<uint8_t>(algo);
 }
 
-std::ostream& operator<< (std::ostream& os, const InitialPartitionerAlgorithm& algo) {
+inline std::ostream& operator<< (std::ostream& os, const InitialPartitionerAlgorithm& algo) {
   switch (algo) {
     case InitialPartitionerAlgorithm::greedy_sequential: return os << "greedy_sequential";
     case InitialPartitionerAlgorithm::greedy_global: return os << "greedy_global";
@@ -374,7 +374,7 @@ std::ostream& operator<< (std::ostream& os, const InitialPartitionerAlgorithm& a
   return os << static_cast<uint8_t>(algo);
 }
 
-std::ostream& operator<< (std::ostream& os, const LouvainEdgeWeight& weight) {
+inline std::ostream& operator<< (std::ostream& os, const LouvainEdgeWeight& weight) {
   switch (weight) {
     case LouvainEdgeWeight::hybrid: return os << "hybrid";
     case LouvainEdgeWeight::uniform: return os << "uniform";
@@ -386,7 +386,7 @@ std::ostream& operator<< (std::ostream& os, const LouvainEdgeWeight& weight) {
   return os << static_cast<uint8_t>(weight);
 }
 
-std::ostream& operator<< (std::ostream& os, const RefinementStoppingRule& rule) {
+inline std::ostream& operator<< (std::ostream& os, const RefinementStoppingRule& rule) {
   switch (rule) {
     case RefinementStoppingRule::simple: return os << "simple";
     case RefinementStoppingRule::adaptive_opt: return os << "adaptive_opt";
@@ -396,7 +396,7 @@ std::ostream& operator<< (std::ostream& os, const RefinementStoppingRule& rule) 
   return os << static_cast<uint8_t>(rule);
 }
 
-std::ostream& operator<< (std::ostream& os, const FlowAlgorithm& algo) {
+inline std::ostream& operator<< (std::ostream& os, const FlowAlgorithm& algo) {
   switch (algo) {
     case FlowAlgorithm::edmond_karp: return os << "edmond_karp";
     case FlowAlgorithm::goldberg_tarjan: return os << "goldberg_tarjan";
@@ -408,7 +408,7 @@ std::ostream& operator<< (std::ostream& os, const FlowAlgorithm& algo) {
   return os << static_cast<uint8_t>(algo);
 }
 
-std::ostream& operator<< (std::ostream& os, const FlowNetworkType& type) {
+inline std::ostream& operator<< (std::ostream& os, const FlowNetworkType& type) {
   switch (type) {
     case FlowNetworkType::lawler: return os << "lawler";
     case FlowNetworkType::heuer: return os << "heuer";
@@ -420,7 +420,7 @@ std::ostream& operator<< (std::ostream& os, const FlowNetworkType& type) {
   return os << static_cast<uint8_t>(type);
 }
 
-std::ostream& operator<< (std::ostream& os, const FlowExecutionMode& mode) {
+inline std::ostream& operator<< (std::ostream& os, const FlowExecutionMode& mode) {
   switch (mode) {
     case FlowExecutionMode::constant: return os << "constant";
     case FlowExecutionMode::multilevel: return os << "multilevel";

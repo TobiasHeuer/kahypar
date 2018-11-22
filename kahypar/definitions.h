@@ -65,15 +65,16 @@ using HighResClockTimepoint = std::chrono::time_point<std::chrono::high_resoluti
 
 // this is nasty and needs to be fixed
 namespace std {
-static kahypar::IncidenceIterator begin(const std::pair<kahypar::IncidenceIterator,
+inline kahypar::IncidenceIterator begin(const std::pair<kahypar::IncidenceIterator,
                                                         kahypar::IncidenceIterator>& x) {
   return x.first;
 }
 
-static kahypar::IncidenceIterator end(const std::pair<kahypar::IncidenceIterator,
+inline kahypar::IncidenceIterator end(const std::pair<kahypar::IncidenceIterator,
                                                       kahypar::IncidenceIterator>& x) {
   return x.second;
 }
+
 
 template <typename Iterator>
 Iterator begin(std::pair<Iterator, Iterator>& x) {

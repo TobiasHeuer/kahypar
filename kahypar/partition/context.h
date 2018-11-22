@@ -510,7 +510,7 @@ static inline void checkRecursiveBisectionMode(RefinementAlgorithm& algo) {
   }
 }
 
-void checkDirectKwayMode(RefinementAlgorithm& algo, Objective& objective) {
+inline void checkDirectKwayMode(RefinementAlgorithm& algo, Objective& objective) {
   if (algo == RefinementAlgorithm::twoway_fm ||
       algo == RefinementAlgorithm::twoway_flow ||
       algo == RefinementAlgorithm::twoway_fm_flow) {
